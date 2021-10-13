@@ -87,6 +87,7 @@ checkBtn.addEventListener("click", () => {
     document.body.style.backgroundColor = "#60b347";
     secretNum.textContent = randSecretNum;
     confetti.style.display = "block";
+    document.querySelector("h1").textContent = "That's the WAY! to answer 👌";
   }
   if (Number(userGussedNumber.value) !== randSecretNum) {
     Number(userGussedNumber.value) > randSecretNum
