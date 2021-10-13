@@ -88,6 +88,8 @@ checkBtn.addEventListener("click", () => {
     secretNum.textContent = randSecretNum;
     confetti.style.display = "block";
     document.querySelector("h1").textContent = "That's the WAY! to answer 👌";
+    userGussedNumber.disabled = true;
+    checkBtn.disabled = true;
   }
   if (Number(userGussedNumber.value) !== randSecretNum) {
     Number(userGussedNumber.value) > randSecretNum
@@ -108,4 +110,6 @@ restartGame.addEventListener("click", () => {
   document.querySelector("h1").textContent = "Guess My Number!";
   document.body.style.backgroundColor = "#222";
   confetti.style.display = "none";
+  document.querySelector(".guess").disabled = false;
+  document.querySelector(".check").disabled = false;
 });
